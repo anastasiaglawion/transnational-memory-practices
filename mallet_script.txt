@@ -1,0 +1,14 @@
+#----------------model 
+cd C:\mallet
+
+bin\mallet import-dir  --input input_corpusmodel3\all --output cm3.mallet --keep-sequence --remove-stopwords --extra-stopwords stoplists\en.txt
+
+cd C:\mallet
+
+bin\mallet train-topics --input cm3.mallet --num-topics 100 --num-iterations 10000 --num-top-words 100 --optimize-interval 20 --optimize-burn-in 50 --output-model output_cm3\cm3_100t_100w_10000i_model.txt --output-state output_cm3\cm3_100t_100w_10000i_model.gz --output-doc-topics output_cm3\cm3_100t_100w_10000i_doc_topics.txt --output-topic-keys output_cm3\topic_models_cm3_100t_100w_10000i.txt --diagnostics-file output_cm3\diagnostics_cm3_100t_100w_10000i.xml
+
+
+#----------------control 
+cd C:\mallet
+
+bin\mallet train-topics --input cm3.mallet --num-topics 100 --num-iterations 10000 --num-top-words 100 --optimize-interval 20 --optimize-burn-in 50 --output-model output_cm3\cm3_control_100t_100w_10000i_model.txt --output-state output_cm3\cm3_control_100t_100w_10000i_model.gz --output-doc-topics output_cm3\cm3_control_100t_100w_10000i_doc_topics.txt --output-topic-keys output_cm3\topic_models_cm3_control_100t_100w_10000i.txt --diagnostics-file output_cm3\diagnostics_cm3_control_100t_100w_10000i.xml
