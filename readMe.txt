@@ -7,4 +7,7 @@ visLocationPerCluster.R: Commands for the visualizations of metadata (location)
 visTimeframePerCluster.R: Commands for the visualizations of metadata (timeframe)
 webscrapingFunctions.R: Functions created for web scraping the Axis History Forum (AHF).
 
+The files "output_apify_location_ru.xlsx", "output_apify_location_us.xlsx", "output_apify_location_germany.xlsx"
+contain the Google search results for keywords related to World War II with varying location settings (see Chapter 2.1. Online resources dedicated to World War II: An overview). 
+
 For questions, please contact: anastasia.glawion@tu-darmstadt.de
